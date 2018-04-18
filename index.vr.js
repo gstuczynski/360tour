@@ -42,7 +42,7 @@ const PPM = 1 / (2 * Math.PI * 3) * MAX_TEXTURE_WIDTH;
  */
 class TourSample extends React.Component {
   static defaultProps = {
-    tourSource: 'tourOfTheChester.json',
+    tourSource: 'tourOfBonarka.json',
   };
 
   constructor(props) {
@@ -146,8 +146,8 @@ class TourSample extends React.Component {
                           pixelsPerMeter={PPM}
                           source={asset('info_icon.png')}
                           tooltip={tooltip}
-                          translateX={degreesToPixels(tooltip.rotationX)}
-                          translateY={degreesToPixels(tooltip.rotationY)}
+                          translateX={tooltip.translateX}
+                          translateY={tooltip.translateY}
                         />
                       );
                     }
@@ -168,9 +168,8 @@ class TourSample extends React.Component {
                         pixelsPerMeter={PPM}
                         source={asset(this.state.data.nav_icon)}
                         textLabel={tooltip.text}
-                        translateX={degreesToPixels(tooltip.rotationX)}
-                        translateY={degreesToPixels(tooltip.rotationY)}
-                        translateZ={degreesToPixels(tooltip.rotationZ)}
+                        translateX={tooltip.translateX}
+                        translateY={tooltip.translateY}
                       />
                     );
                   })}

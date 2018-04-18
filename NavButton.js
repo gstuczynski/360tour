@@ -28,7 +28,7 @@ const VrSoundEffects = require('VrSoundEffects');
  * Once selected, the button disappears and a loading spinner takes its place.
  *
  * When using with CylinderLayer, set pixelsPerMeter to convert units, otherise
- * set translateZ to specify distance between camera and button. 
+ * set translateZ to specify distance between camera and button.
  */
 class NavButton extends React.Component {
   static defaultProps = {
